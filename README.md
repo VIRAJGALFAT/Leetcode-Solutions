@@ -1,5 +1,3 @@
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=VIRAJGALFAT&show_icons=true&theme=radical)
 #🚀 LeetCode Solutions
 
 > My journey to mastering Data Structures & Algorithms.
