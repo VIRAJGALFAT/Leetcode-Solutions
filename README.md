@@ -30,9 +30,9 @@ I focus on:
 
 | Difficulty | Solved |
 |------------|--------|
-| 🟢 Easy     | 25     |
-| 🟡 Medium   | 15     |
-| 🔴 Hard     | 5      |
+| 🟢 Easy     | 64    |
+| 🟡 Medium   | 07    |
+| 🔴 Hard     | 01    |
 
 ---
 
