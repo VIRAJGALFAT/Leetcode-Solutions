@@ -45,8 +45,7 @@ I focus on:
 
 ## 🎯 Goal
 
-Solve 300+ problems before placements.
-
+Solve 300+ problems !!
 ---
 
 ⭐ If you like this repo, consider starring it!
