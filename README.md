@@ -22,6 +22,7 @@ I focus on:
 - Stack & Queue
 - Trees
 - Graphs
+
 - Dynamic Programming
 
 ---
@@ -30,8 +31,8 @@ I focus on:
 
 | Difficulty | Solved |
 |------------|--------|
-| 🟢 Easy     | 77    |
-| 🟡 Medium   | 19    |
+| 🟢 Easy     | 86    |
+| 🟡 Medium   | 22    |
 | 🔴 Hard     | 02    |
 
 ---
