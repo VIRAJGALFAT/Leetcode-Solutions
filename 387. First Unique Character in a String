@@ -1,0 +1,19 @@
+#https://leetcode.com/problems/first-unique-character-in-a-string/description/
+
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        hashMap = {}
+        for i in s:
+            if i in hashMap:
+                hashMap[i] += 1
+            else:
+                hashMap[i] = 1
+        for i,j in hashMap.items():
+            if j == 1:
+                return s.index(i)
+
+        else:
+            return -1
+                    
+                    
+        
