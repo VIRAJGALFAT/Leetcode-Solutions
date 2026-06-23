@@ -1,0 +1,28 @@
+# https://leetcode.com/problems/palindrome-linked-list/description/
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        res = []
+        t1 = head
+        while t1.next != None:
+            res.append(t1.val)
+            t1 = t1.next
+        res.append(t1.val)
+        l = 0
+        r = -1
+        ans = True
+        while l < (len(res)//2):
+            if res[l] != res[r]:
+               ans = False
+               break
+            else:
+                l += 1
+                r -= 1
+        return ans
+
+
