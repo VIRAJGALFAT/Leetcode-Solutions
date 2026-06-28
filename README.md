@@ -31,8 +31,8 @@ I focus on:
 
 | Difficulty | Solved |
 |------------|--------|
-| 🟢 Easy     | 86    |
-| 🟡 Medium   | 22    |
+| 🟢 Easy     | 117    |
+| 🟡 Medium   | 27    |
 | 🔴 Hard     | 02    |
 
 ---
