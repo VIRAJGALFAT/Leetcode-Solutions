@@ -10,7 +10,7 @@ This repository contains my solutions to LeetCode problems.
 I focus on:
 - Clean code
 - Optimal complexity
-- Clear logic
+- Clear logics
 
 ---
 
