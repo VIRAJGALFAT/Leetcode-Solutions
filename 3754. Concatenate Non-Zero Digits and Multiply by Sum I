@@ -1,0 +1,18 @@
+# https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/
+
+class Solution:
+    def sumAndMultiply(self, n: int) -> int:
+        if n == 0:
+            return 0
+        n = str(n)
+        res = []
+        for i in n:
+            res.append(int(i))
+        summ = sum(res)
+        s =''
+        for i in n:
+            if i != "0":
+                s += i
+        s = int(s)
+        return s*summ
+
