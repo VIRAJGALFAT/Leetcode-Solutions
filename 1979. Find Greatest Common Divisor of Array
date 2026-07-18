@@ -1,0 +1,7 @@
+#https://leetcode.com/problems/find-greatest-common-divisor-of-array/description/
+import math
+class Solution:
+    def findGCD(self, nums: List[int]) -> int:
+        minn = min(nums)
+        maxx = max(nums)
+        return math.gcd(minn,maxx)
