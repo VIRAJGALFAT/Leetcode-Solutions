@@ -1,0 +1,28 @@
+#https://leetcode.com/problems/rotate-list/description/
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+        if not head or k == 0:
+            return head
+        length = 1
+        tail = head
+        while tail.next != None:
+            tail = tail.next
+            length += 1
+        count = length - (k % length)
+        
+        #joining the tail to head
+        tail.next = head
+        while count > 0:
+            head = head.next 
+            tail = tail.next
+            count -= 1
+        # Unlink the tail to head link 
+        tail.next = None
+        
+        return head
