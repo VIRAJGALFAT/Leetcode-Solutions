@@ -1,0 +1,17 @@
+# https://leetcode.com/problems/merge-intervals/description/
+
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+
+        #interval sorting by intervals[0]
+        intervals.sort(key = lambda x:x[0])
+
+        output = [intervals[0]]
+        for start,end in intervals[1:]:
+            lastCall = output[-1][1]
+            
+            if start <= lastCall:
+               output[-1][1] = max(lastCall,end)
+            else:
+                output.append([start,end])
+        return output
