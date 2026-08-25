@@ -1,0 +1,11 @@
+# https://leetcode.com/problems/climbing-stairs/description/
+
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        if n == 1:
+            return 1
+        feb = [1,2]
+        for i in range(2,n):
+            newOne = feb[-1] + feb[-2]
+            feb.append(newOne)
+        return feb[-1]
