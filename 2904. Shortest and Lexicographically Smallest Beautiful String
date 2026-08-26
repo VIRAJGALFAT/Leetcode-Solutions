@@ -1,0 +1,21 @@
+#https://leetcode.com/problems/shortest-and-lexicographically-smallest-beautiful-string/description/
+
+class Solution:
+    def shortestBeautifulSubstring(self, s: str, k: int) -> str:
+        subarray = []
+        res = []
+        for i in range(len(s)):
+            for j in range(i,len(s)):
+                subarray.append(s[i:j+1])
+        for i in subarray:
+            if i.count("1") == k:
+                res.append(i)
+        res.sort()
+        if not res:
+            return ""
+        minLen = min(len(i) for i in res)
+        candidates = [x for x in res if len(x) == minLen]
+        candidates.sort()
+        return candidates[0]
+
+
