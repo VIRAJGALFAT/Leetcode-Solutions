@@ -1,0 +1,13 @@
+# https://leetcode.com/problems/construct-uniform-parity-array-i/description/
+
+class Solution:
+    def uniformArray(self, nums1: list[int]) -> bool:
+        nums2 = nums1
+        j = 0
+        for i in range(len(nums1)):
+            if nums2[i] != nums1[j]:
+                return False
+            else: 
+                j += 1
+
+        return True
