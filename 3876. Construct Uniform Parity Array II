@@ -1,0 +1,21 @@
+# https://leetcode.com/problems/construct-uniform-parity-array-ii/description/
+
+class Solution:
+    def uniformArray(self, nums1: list[int]) -> bool:
+
+        smallest = float('inf')
+        for i in nums1:
+            if i % 2 == 1:
+                smallest = min(smallest,i)
+        
+        if smallest == float('inf'):
+            return True
+        
+        for i in nums1:
+            if i % 2 == 0 and i <= smallest:
+                return False
+        return True
+        
+
+        
+
