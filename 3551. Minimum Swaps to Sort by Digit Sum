@@ -1,0 +1,33 @@
+# https://leetcode.com/problems/minimum-swaps-to-sort-by-digit-sum/description/
+
+class Solution:
+    def minSwaps(self, nums: List[int]) -> int:
+
+        def ds(num):
+            s = 0
+            while num:
+                s += num % 10
+                num //= 10
+            return s
+        # this is for digits sum 
+        order = sorted(range(len(nums)),key = lambda i:(ds(nums[i]),nums[i]))
+        # it order the digit sum acording to the relevant positions
+        '''
+        Sorted keys: (1,100), (3,3), (3,12), (3,21), (10,37)
+        To order = [1, 4, 2, 3, 0] 
+        '''
+        n = len(nums)
+        visited = [False] * n
+        swaps = 0
+        for i in range(n):
+            if visited[i] or order[i] == i: # agr order position match hoti hai so contiune else 
+                continue
+            length, j = 0,i
+            while not visited[j]:
+                visited[j] = True
+                j = order[j]
+                length += 1
+            swaps += length - 1
+        return swaps
+            
+
