@@ -1,0 +1,16 @@
+# https://leetcode.com/problems/count-days-spent-together/description/ 
+
+class Solution:
+    def countDaysTogether(self, arriveAlice: str, leaveAlice: str, arriveBob: str, leaveBob: str) -> int:
+        start = max(arriveAlice, arriveBob)
+        end = min(leaveAlice, leaveBob)
+
+        if start > end:
+            return 0
+        from datetime import date
+
+        startDay = date(2023, int(start[:2]), int(start[3:]))
+        endDate  = date(2023, int(end[:2]), int(end[3:]))
+        
+        return abs(startDay - endDate).days + 1
+
