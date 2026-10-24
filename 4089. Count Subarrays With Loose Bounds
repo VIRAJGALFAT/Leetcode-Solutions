@@ -1,0 +1,13 @@
+#https://leetcode.com/problems/count-subarrays-with-loose-bounds/description/
+
+class Solution:
+    def countSubarrays(self, nums: list[int], minK: int, maxK: int) -> int:
+        cnt = 0
+        length = 0
+        for num in nums:
+            if minK <= num <= maxK:
+                length += 1
+                cnt += length
+            else:
+                length = 0 
+        return cnt              
