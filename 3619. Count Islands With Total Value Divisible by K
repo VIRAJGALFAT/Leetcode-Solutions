@@ -1,0 +1,33 @@
+# https://leetcode.com/problems/count-islands-with-total-value-divisible-by-k/description/
+
+class Solution:
+    def countIslands(self, grid: List[List[int]], k: int) -> int:
+        def dfs(grid, r, c):
+            
+            total = 0
+            if( r >= m or r < 0 or c >= n or c < 0):
+                return False
+            if grid[r][c] == 0:
+                return 0
+            total = grid[r][c]
+            grid[r][c] = 0
+            
+            total += dfs(grid, r, c-1)
+            total += dfs(grid, r, c+1)
+            total += dfs(grid, r-1, c)
+            total += dfs(grid, r+1, c)
+
+            return total
+
+        
+        m = len(grid)
+        n = len(grid[0])
+        cnt = 0
+
+        for i in range(m):
+            for j in range(n):
+                if (grid[i][j] != 0):
+                    if (dfs(grid, i, j) % k == 0):
+                        cnt += 1
+        return cnt
+
