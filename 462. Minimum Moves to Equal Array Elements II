@@ -1,0 +1,12 @@
+#https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/description/?envType=daily-question&envId=2026-11-02
+
+class Solution:
+    def minMoves2(self, nums: list[int]) -> int:
+        nums.sort()
+        opr = 0 
+        n = len(nums) // 2
+        for i in range(len(nums)):
+            if i != n:
+                opr += abs(nums[i] - nums[n])
+        return opr
+
