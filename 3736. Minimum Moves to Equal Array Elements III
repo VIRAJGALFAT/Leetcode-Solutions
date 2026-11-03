@@ -1,0 +1,9 @@
+# https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii/description/?envType=daily-question&envId=2026-11-03
+
+class Solution:
+    def minMoves(self, nums: List[int]) -> int:
+        high = max(nums)
+        opr = 0
+        for i in range(len(nums)):
+            opr += abs(nums[i] - high)
+        return opr
