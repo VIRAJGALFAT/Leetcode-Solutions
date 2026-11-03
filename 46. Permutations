@@ -1,0 +1,10 @@
+# https://leetcode.com/problems/permutations/description/
+
+from itertools import permutations
+class Solution:
+    def permute(self, nums: list[int]) -> list[list[int]]:
+        res = []
+        perm = permutations(nums)
+        for i in perm:
+            res.append(i)
+        return res
