@@ -1,0 +1,16 @@
+# https://leetcode.com/problems/minimum-positive-sum-subarray/description/?envType=daily-question&envId=2026-11-14
+class Solution:
+    def minimumSumSubarray(self, nums: List[int], l: int, r: int) -> int:
+        ans = []
+        for i in range(len(nums)):
+            for j in range(len(nums)):
+                ans.append(nums[i:j+1])
+        res = []
+        for i in ans:
+            if len(i) >= l and len(i) <= r and sum(i) > 0:
+                res.append(sum(i))
+        if not res:
+            return -1
+        else:
+            return min(res)
+            
