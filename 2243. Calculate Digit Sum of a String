@@ -1,0 +1,19 @@
+# https://leetcode.com/problems/calculate-digit-sum-of-a-string/description/?envType=daily-question&envId=2026-11-16
+
+class Solution:
+    def digitSum(self, s: str, k: int) -> str:
+        if len(s) <= k:
+            return s
+        def repeat(s,k): 
+           smb = ''
+           l = 0
+           while(l < len(s)):
+               smb += str(((sum(int(x) for x in s[l:k+l]))))
+               l += k
+           
+           if len(smb) <= k:
+              return smb
+           else:
+              return repeat(smb, k)
+        return repeat(s, k)
+
