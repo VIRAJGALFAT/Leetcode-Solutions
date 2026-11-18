@@ -1,0 +1,16 @@
+# https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful/description/?envType=daily-question&envId=2026-11-18
+
+class Solution:
+    def minChanges(self, s: str) -> int:
+        opr = 0 
+        l = 0 
+        r = 1
+        while r <= len(s):
+            if s[l] != s[r]:
+                l += 2
+                r += 2
+                opr += 1
+            else:
+                l += 2
+                r += 2
+        return opr 
