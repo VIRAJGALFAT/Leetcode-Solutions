@@ -1,0 +1,11 @@
+# https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/description/?envType=daily-question&envId=2026-11-22
+
+
+class Solution:
+    def checkString(self, s: str) -> bool:
+        l = list(s)
+        l.sort()
+        s = list(s)
+    
+        return  l == s            
+
